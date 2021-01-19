@@ -1,32 +1,11 @@
-# Getting Started with Create React App
-
 The Autoimmune Protocol
 
-Overview — This repo contains the files for an app created to share recipes, books, podcasts, and events for people following the AIP.
+Overview — This repo contains the files for an app created to share recipes, books, podcasts, and events with people in the AIP community.
 
-### `npm start`
-Users will be able to create an account and then post links to recipes; titles and short descriptions of books; titles, links, and short descriptions of podcasts; and links to events from the AIP community. Users can bookmark posts.
+Users will be able to create an account and then post links to recipes; titles and short descriptions of books; titles, links, and short descriptions of podcasts; and links to events from the AIP community. 
+Screenshots of app
+Landing page
+
+
 
 Key Technology - React, HTML, CSS, JavaScript
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-
-

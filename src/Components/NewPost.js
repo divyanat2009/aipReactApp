@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarAlt, faIdCard, faSmile  } from '@fortawesome/free-regular-svg-icons';
 import { faPodcast, faSeedling, faBookOpen,faUser, faHeartbeat} from '@fortawesome/free-solid-svg-icons';
 import {BASE_URL} from "../../src/config";
-import {BASE_URL_FRONTEND} from "../../src/config";
+
 
 class NewPost extends Component{
   static contextType = Context;

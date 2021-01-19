@@ -58,10 +58,9 @@ startExploring = () => {
                 <label htmlFor="password">Password</label>
                 <input placeholder="*******" type="password" name='password' id='password' 
                  onChange={e=>this.setForm(e)}/>
-                <button type="submit">Sign Up</button>
-                <button type="learn-more" onClick={this.startExploring}>Learn More</button>
+                <button type="submit">Sign Up</button>                
                 </form>
-              <p>Thank you for your interest in our app. This is the beta version so you cannot create an account yet.</p>
+              
               </main>
             </div>
 

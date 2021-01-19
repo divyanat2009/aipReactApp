@@ -93,7 +93,13 @@ section{
   color:#391832;
   text-decoration: none;
 }
+.landing-page p{
+  margin-bottom: 50px;
+}
 
+.about h2, .learnmore h2{
+  font-size: 20px;
+}
 .nav-list a:hover{
   color:#480000;
   border-bottom:1px solid #480000;
@@ -150,6 +156,7 @@ header{
   text-align: left;
   max-width: 300px;
   margin: 35px auto 10px;  
+  font-size: 20px;
 }
 
 .individual-post-container{

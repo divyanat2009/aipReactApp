@@ -43,8 +43,7 @@ render(){
           <h1>Welcome to The Autoimmune Solution</h1>
           <h2 className="tagline">Your resource for nutritional science and lifestyle of the Autoimmune Diet.</h2>          
           <p>This app was created to find positive thoughts, books, podcasts, recipes and events in the AIP Community.You can create your own posts and bookmark posts.</p>
-          <button className="button" onClick={this.learnMore}>Learn More</button>
-          <button className="button" onClick={this.startExploring}>Start</button>     
+          <button className="button" onClick={this.learnMore}>Learn More</button>              
           </div>
           <About/>    
         </header>
