@@ -17,8 +17,7 @@ class MyAccount extends Component{
     } 
     setForm(e)
    {
-    const {name, value} = e.target;
-    console.log(value);
+    const {name, value} = e.target;    
     this.setState({
         [name] : value
     });

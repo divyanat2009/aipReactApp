@@ -13,12 +13,10 @@ class Dashboard extends Component{
     const user = this.props.match.params.username;
     this.setState({
       user : user
-    })
-    console.log(user)
+    })    
     fetch(BASE_URL+'/posts/'+user)
     .then(response=> response.json())
-    .then(response=>{
-      console.log(response)
+    .then(response=>{      
       this.setState({
         posts: response
       })
