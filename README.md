@@ -9,7 +9,7 @@ Users will be able to create an account and then post links to recipes; titles a
 
 Test Credentials:
 Username:jondoe6
-Password:happy123
+Password:password
 
 Screenshots of app
 Landing page
