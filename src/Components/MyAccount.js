@@ -52,11 +52,11 @@ class MyAccount extends Component{
                     
                     <div className="form-field-group">
                         <label htmlFor="username">UserName</label>
-                        <input placeholder="user123" type="username" name='username' id='username' onChange={(e)=>this.setForm(e)}/>
+                        <input placeholder="user123" type="username" name='username' id='username' onChange={(e)=>this.setForm(e)} required/>
                     </div>
                     <div className="form-field-group">
                         <label htmlFor="password">Password</label>
-                        <input placeholder="*******" type="password" name='password' id='password' onChange={(e)=>this.setForm(e)}/>
+                        <input placeholder="*******" type="password" name='password' id='password' onChange={(e)=>this.setForm(e)} required/>
                     </div>
                     <button type="submit">SignIn</button>                    
                    </form> 

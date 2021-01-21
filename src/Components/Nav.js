@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import IconButton from './IconButton';
-import { faPlusSquare} from '@fortawesome/free-regular-svg-icons';
+import { faAddressCard, faPlusSquare} from '@fortawesome/free-regular-svg-icons';
 import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 
 class Nav extends Component {
@@ -29,7 +29,32 @@ class Nav extends Component {
                   tooltipMessage = {'Sign-Out'}
                   tooltipClass={'bottom-farleft'}
               />
-          </nav>)}      
+          </nav>)}     
+        if (this.props.pageType==='newPost'){
+          List = ( 
+            <nav className="main-nav nav">
+                <IconButton
+                    link={`/${this.props.user}/dashboard`}
+                    ariaLabel={`add new post`}
+                    displayChange={'all'}
+                    iconType={faAddressCard}
+                    buttonColor={'orange-background'}
+                    tooltipMessage = {'view all your posts'}
+                    tooltipClass={'bottom-farright'}
+                />
+                <h1>The Autoimmune Solution</h1>
+                <IconButton
+                    link={'/'}
+                    ariaLabel={`learn more page`}
+                    displayChange={'all'}
+                    iconType={faSignOutAlt}
+                    buttonColor={'orange-background'}
+                    tooltipMessage = {'Sign-Out'}
+                    tooltipClass={'bottom-farleft'}
+                />
+            </nav>)
+
+        }   
         if (this.props.pageType==='home'){
             List = (
               <div className="home-nav-links">

@@ -94,7 +94,7 @@ section{
   text-decoration: none;
 }
 .landing-page p{
-  margin-bottom: 50px;
+  margin-bottom: 75px;
 }
 
 .about h2, .learnmore h2{
@@ -321,6 +321,7 @@ svg.filter-icon path {
 
 .icon-button-container {
   display: inline-block;
+  fill:#480000;
 }
 
 .icon-button-container svg {

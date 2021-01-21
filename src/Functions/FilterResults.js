@@ -34,3 +34,11 @@ const findBookmarkId=(post_id,bookmarks)=>{
   let bookmarkId = bookmarks.find(bookmark=>bookmark.post_id===post_id).bookmark_id;
   return bookmarkId
 }
+
+
+/*<FilterButtons
+                    buttonInfo={[                    
+                    {aria_label:'my posts',icon_type:faUser, link:`/${this.state.user}/dashboard`, display_change:'user', tooltipMessage:'view all your posts',tooltipClass:'bottom-farright'},
+                                            
+                    ]}                
+                />*/
