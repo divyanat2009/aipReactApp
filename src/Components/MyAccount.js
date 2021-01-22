@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Nav from './Nav';
-import UserSignUp from "./UserSignUp";
 import {BASE_URL} from "../../src/config";
 import {BASE_URL_FRONTEND} from "../../src/config";
 import Cookies from 'universal-cookie';
