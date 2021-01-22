@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import Nav from './Nav';
-import FilterButtons from './FilterButtons';
 import FilterButtonsForm from './FilterButtonsForm';
 import Context from '../Context'
 import '../_styles/Form.css';
 import config from '../config'
 import ValidationError from './ValidationError'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCalendarAlt, faIdCard, faSmile  } from '@fortawesome/free-regular-svg-icons';
-import { faPodcast, faSeedling, faBookOpen,faUser, faHeartbeat} from '@fortawesome/free-solid-svg-icons';
+import { faCalendarAlt, faSmile  } from '@fortawesome/free-regular-svg-icons';
+import { faPodcast, faSeedling, faBookOpen, faHeartbeat} from '@fortawesome/free-solid-svg-icons';
 import {BASE_URL} from "../../src/config";
 
 
@@ -261,13 +260,8 @@ render(){
     return(
         <div className="new-post form-page">
             <header>
-                <Nav pageType={'interior'} user={this.state.user}/>
-                <FilterButtons
-                    buttonInfo={[                    
-                    {aria_label:'my posts',icon_type:faUser, link:`/${this.state.user}/dashboard`, display_change:'user', tooltipMessage:'view all your posts',tooltipClass:'bottom-farright'},
-                    {aria_label:'my account',icon_type:faIdCard, link:'/my-account',display_change:'all', tooltipMessage:'signin to your account',tooltipClass:'bottom-farright'},                    
-                    ]}                
-                />
+                <Nav pageType={'newPost'} user={this.state.user}/>
+                
             </header>
             <main>
             <FilterButtonsForm
@@ -300,13 +294,7 @@ render(){
                             <input 
                                 type="text" name="by" id="by" placeholder="Maya Angelou"
                                 onChange={e => this.updateChange(e.target.value, e.target.id)}/>
-                        </div>
-                        <div className={`form-field-group field-doctor ${areTypeSpecificFieldsVisible['doctor'] ? "" : " hidden"}`}>
-                            <label htmlFor="by">Nutritionist</label>
-                            <input 
-                                type="text" name="by" id="by" placeholder="Kimberly Snyder"
-                                onChange={e => this.updateChange(e.target.value, e.target.id)}/>
-                        </div>
+                        </div>                        
                         
                         <div className={`form-field-group field-link ${areTypeSpecificFieldsVisible['link'] ? "" : " hidden"} `}>
                             <label htmlFor="link">Link*</label>
