@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import Nav from './Nav';
+import FilterButtons from './FilterButtons';
 import FilterButtonsForm from './FilterButtonsForm';
 import Context from '../Context'
 import '../_styles/Form.css';
 import config from '../config'
 import ValidationError from './ValidationError'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCalendarAlt, faSmile  } from '@fortawesome/free-regular-svg-icons';
-import { faPodcast, faSeedling, faBookOpen, faHeartbeat} from '@fortawesome/free-solid-svg-icons';
+import { faCalendarAlt, faIdCard, faSmile  } from '@fortawesome/free-regular-svg-icons';
+import { faPodcast, faSeedling, faBookOpen,faUser, faHeartbeat} from '@fortawesome/free-solid-svg-icons';
 import {BASE_URL} from "../../src/config";
 
 
@@ -87,13 +88,12 @@ class NewPost extends Component{
 
   updateChange=(inputValue, id)=>{
     const {inputs} = this.state;
-    
-    
+        
     if(id!=='post_image'){
         inputs[id]={value:inputValue,touched:true}
      }
      else if(id==='post_image'){
-         
+    
          inputs[id]={file:inputValue[0],touched:true}
      }
     this.setState({inputs:inputs})
@@ -101,7 +101,6 @@ class NewPost extends Component{
   }
 
   checkDisableSubmit(){
-
     if(this.state.inputs.post_image.touched){
         this.setState({submitDisabled:false})
     }
@@ -111,12 +110,10 @@ class NewPost extends Component{
         {this.setState({submitDisabled:false})}
         }
         else if(this.state.fieldType==='recipe' && this.state.inputs.content.touched && this.state.submitDisabled){
-       
-        this.setState({submitDisabled:false})  
+          this.setState({submitDisabled:false})  
         }
         else if(this.state.fieldType==='book' && this.state.inputs.title.touched && this.state.inputs.author.touched && this.state.submitDisabled){
-           
-            this.setState({submitDisabled:false})  
+          this.setState({submitDisabled:false})  
         }  
     }
 }
@@ -168,8 +165,7 @@ handleSubmit=(e)=>{
         })
         .then(res => {
             newPostWithImage.image_path = res.data.image;
-            
-           return  fetch(url, {
+            return  fetch(url, {
                 method: 'POST',
                 body: JSON.stringify(newPostWithImage),
                 headers: {
@@ -236,12 +232,8 @@ fetch(url, {
 
 postData()
 {
-    
     const user = this.props.match.params.username;
-    
     const {inputs, fieldType}=this.state; 
-    //user_id, title, link, start_date,by,content, post_type
-    
     fetch(BASE_URL+'/posts/'+user, {
       method:'post',
       headers:{'Content-Type' : 'application/json'},
@@ -256,7 +248,6 @@ postData()
     })
     .then(response=> response.json())
     .then(response=>{
-    
       alert("Thank you for your post!");
       //window.location.href = BASE_URL_FRONTEND+"/my-account";
     })
@@ -270,7 +261,13 @@ render(){
     return(
         <div className="new-post form-page">
             <header>
-                <Nav pageType={'newPost'} user={this.state.user}/>                
+                <Nav pageType={'interior'} user={this.state.user}/>
+                <FilterButtons
+                    buttonInfo={[                    
+                    {aria_label:'my posts',icon_type:faUser, link:`/${this.state.user}/dashboard`, display_change:'user', tooltipMessage:'view all your posts',tooltipClass:'bottom-farright'},
+                    {aria_label:'my account',icon_type:faIdCard, link:'/my-account',display_change:'all', tooltipMessage:'signin to your account',tooltipClass:'bottom-farright'},                    
+                    ]}                
+                />
             </header>
             <main>
             <FilterButtonsForm

@@ -29,7 +29,7 @@ class ResultList extends Component{
       
     return(
       <section className="results-list">   
-        {this.props.postsToDisplay==='posts'? <h2>You are viewing {typeOfPost} posts {this.context.currentDisplay.user_posts_displayed} </h2> : <h2>Your Posts</h2>}           
+        {this.props.postsToDisplay==='posts'? <h2>You are viewing {typeOfPost} posts {this.context.currentDisplay.user_posts_displayed} </h2> : <h2>Your Bookmarks</h2>}           
         <ul className="result-list">
           {postde}
         </ul>
@@ -38,4 +38,4 @@ class ResultList extends Component{
   }
 }
 
-export default ResultList; 
+export default ResultList;
