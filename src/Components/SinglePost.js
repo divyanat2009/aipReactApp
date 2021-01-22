@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import '../libraries/fontawesome.js';
 import '../_styles/posts.css';
-import DeletePost from'./DeletePost';
-import AddBookmark from './AddBookmark'
-import UpdateBookmark from './UpdateBookmark'
+//import DeletePost from'./DeletePost';
+//import AddBookmark from './AddBookmark'
+//import UpdateBookmark from './UpdateBookmark'
 import Context from '../Context';
 import { isCurrentlyBookmarked } from '../Functions/FilterResults'
-import DeleteBookmark from './DeleteBookmark';
+//import DeleteBookmark from './DeleteBookmark';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarAlt } from '@fortawesome/free-regular-svg-icons';
 import {faHeartbeat, faPodcast, faBookOpen, faSeedling } from '@fortawesome/free-solid-svg-icons';
@@ -22,14 +22,14 @@ class SinglePost extends Component{
         }
       }
     render(){
-        const{post_id, post_type, title, by, link, content, username, bookmark_content, bookmark_id, image_path} = this.props;
-        const currentUserId = this.context.currentUserInfo.user_id;
+        const{post_id, post_type, title, link, content, username} = this.props;
+        //const currentUserId = this.context.currentUserInfo.user_id;
         //const allPostInfo = this.props.postInfo;
         let listItem ='';
         let button ='';
         let form ='';
         let uploadedImage ='';
-        let bookmarkButton ='';
+        //let bookmarkButton ='';
         let icon ='';
         let bookmarked = false;
 
@@ -48,10 +48,10 @@ class SinglePost extends Component{
         else if(post_type==='book'){
             icon = faBookOpen
         }
-        let currentUser = this.context.currentUserInfo.username;
+        //let currentUser = this.context.currentUserInfo.username;
         bookmarked = isCurrentlyBookmarked(post_id, this.context.bookmarks);
         //let currentDisplay= this.context.currentDisplay;   
-        if(this.props.postsToDisplay ==='bookmarks' ){
+        /*if(this.props.postsToDisplay ==='bookmarks' ){
             bookmarkButton = 
                 <DeleteBookmark
                     bookmarkId={bookmark_id}
@@ -115,7 +115,7 @@ class SinglePost extends Component{
         }
         if(image_path){
           uploadedImage = <span className="post-span post-image"><img src={image_path} alt={content}/></span>
-        }
+        }*/
         listItem = (<li className={`single-post ${post_type}-post ${bookmarked ? "bookmarked" : "not-bookmarked"}`} key={this.props.post_id}>
                <div className="post-info">
                     <span className="post-span post-icon"><FontAwesomeIcon icon={icon} /></span>
