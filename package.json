@@ -21,7 +21,7 @@
   "scripts": {
     "start": "react-scripts start",
     "prebuild": "",
-    "build": "npm install --prefix client && npm run build --prefix client",
+    "build": "npm install && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "serve": "serve -s build",
