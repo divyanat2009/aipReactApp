@@ -51,7 +51,7 @@ class MyAccount extends Component{
         .catch(err=> alert(err))
     }   
     render(){      
-        let signUp = new UserSignUp(); 
+        
         return(
           <div className="account-page">
             <Nav pageType={'interior'}/>
