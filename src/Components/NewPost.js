@@ -27,7 +27,7 @@ class NewPost extends Component{
       link:{value:"",touched:false},
       content:{value:"",touched:false},
       post_image:{value:"",touched:false, file:""}},
-      user: this.props.match.params.username
+      user: this.props.match.params.username || "divya",
     }//end of state
   }
   //updates the fields displayed depending on the type of post
@@ -168,8 +168,7 @@ handleSubmit=(e)=>{
                 method: 'POST',
                 body: JSON.stringify(newPostWithImage),
                 headers: {
-                  'content-type': 'application/json',
-                 // 'authorization': `Bearer ${config.API_KEY}`
+                  'content-type': 'application/json',                 
                 }
               })
         })
@@ -177,7 +176,7 @@ handleSubmit=(e)=>{
           if (!resp.ok) {
           // get the error message from the response,
             return resp.json().then(error => {
-            // then throw it
+          // then throw it
             throw error
             })
           }
@@ -231,6 +230,7 @@ fetch(url, {
 
 postData()
 {
+ 
     const user = this.props.match.params.username;
     const {inputs, fieldType}=this.state; 
     fetch(BASE_URL+'/posts/'+user, {

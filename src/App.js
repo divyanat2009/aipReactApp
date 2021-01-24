@@ -119,9 +119,8 @@ class App extends Component{
     fetch(url,{
         method:'GET',
         header:{
-        'content-type':'application/json',
-        // 'Authorization':`Bearer ${config.API_KEY}`
-        },
+        'content-type':'application/json',        
+        }
     })
     .then(res=>{
         if(!res.ok){
@@ -144,9 +143,8 @@ getUsers=()=>{
   fetch(`${config.API_ENDPOINT}/users`,{
     method:'GET',
     header:{
-      'content-type':'application/json',
-     // 'Authorization':`Bearer ${config.API_KEY}`
-    },
+      'content-type':'application/json',     
+    }
   })
   .then(res=>{
     if(!res.ok){
