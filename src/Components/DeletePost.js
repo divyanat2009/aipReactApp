@@ -9,8 +9,7 @@ function deletePostRequest(postId, callback){
     fetch(url,{
         method: 'DELETE',
         headers: {
-        'content-type': 'application/json',
-        // 'Authorization': `Bearer ${config.API_KEY}`
+        'content-type': 'application/json',        
         },
     })
    .then(res=>{

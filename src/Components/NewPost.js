@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Nav from './Nav';
 import FilterButtonsForm from './FilterButtonsForm';
-import Context from '../Context'
+import Context from '../Context';
 import '../_styles/Form.css';
-import config from '../config'
-import ValidationError from './ValidationError'
+import config from '../config';
+import ValidationError from './ValidationError';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarAlt, faSmile  } from '@fortawesome/free-regular-svg-icons';
 import { faPodcast, faSeedling, faBookOpen, faHeartbeat} from '@fortawesome/free-solid-svg-icons';
@@ -120,7 +120,7 @@ class NewPost extends Component{
 validateContent(){
     const content = this.state.inputs.content.value.trim();
     if (content.length>800){
-        return 'Please keep posts under 800 characters.'
+        return 'Please keep posts under 800 characters.';
     } 
 }
 
@@ -130,7 +130,7 @@ validateLink(){
 
     if (!regexp.test(link))
     {
-        return 'Please enter a valid url'
+        return 'Please enter a valid url';
     }
 }
 
@@ -204,8 +204,7 @@ fetch(url, {
     method: 'POST',
     body: JSON.stringify(newPost),
     headers: {
-    'content-type': 'application/json',
-    // 'authorization': `Bearer ${config.API_KEY}`
+    'content-type': 'application/json',    
     }  
 })
 .then(res => {
@@ -260,8 +259,7 @@ render(){
     return(
         <div className="new-post form-page">
             <header>
-                <Nav pageType={'newPost'} user={this.state.user}/>
-                
+                <Nav pageType={'newPost'} user={this.state.user}/>                
             </header>
             <main>
             <FilterButtonsForm
@@ -325,20 +323,14 @@ render(){
                     </div>
                         
                     <div className="form-buttons button-row">    
-                        <button 
-                            type="button"
-                            onClick={()=>this.postData()}
-                        >
-                            Post</button>
+                        <button type="button" onClick={()=>this.postData()}>
+                          Post</button>
                         <button type="reset">Cancel</button>
-                    </div>
-                  
-                </form>
-                
+                    </div>                  
+                </form>                
             </main>
         </div>
-    )
-}
+    )}
 }
 
 export default NewPost;

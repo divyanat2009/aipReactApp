@@ -39,7 +39,7 @@ class SinglePost extends Component{
             icon = faBookOpen
         }
   
-        listItem = (<li className='single-post' key={this.props.post_id}>
+    listItem = (<li className='single-post' key={this.props.post_id}>
                <div className="post-info">
                     <span className="post-span post-icon"><FontAwesomeIcon icon={icon} /></span>
                     <div className="user-info">
@@ -51,14 +51,8 @@ class SinglePost extends Component{
                     {content ? <span className="post-span post-content">{content}</span> :""}
                     {link ? <span className="post-span post-link"><a href={link}>Learn More</a></span> : ""}
                     
-                </div>
-                <div className="post-icons-buttons">
-              
-                </div>
-                
-                
-            </li>)
-    
+                </div>                   
+                </li>)    
         return(listItem)    
 }
 }

@@ -3,7 +3,6 @@ import Context from '../Context';
 import config from '../config.js';
 import Tooltip from './Tooltip'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import { faBookmark} from '@fortawesome/free-solid-svg-icons';
 
 function addBookmarkRequest(allPostInfo, currentUserId, callback){
@@ -13,14 +12,12 @@ function addBookmarkRequest(allPostInfo, currentUserId, callback){
         post_id:allPostInfo.post_id,
     }
     
-   // let url = `${config.API_DEV_ENDPOINT}/bookmarks`;
     let url = `${config.API_ENDPOINT}/bookmarks`;
     fetch(url,{
         method: 'POST',
         body:JSON.stringify(newBookmark),
         headers: {
-        'content-type': 'application/json',
-        'Authorization': `Bearer ${config.API_KEY}`
+        'content-type': 'application/json',        
         },
     })
    .then(res=>{

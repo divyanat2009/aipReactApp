@@ -20,16 +20,16 @@ class ResultList extends Component{
       postsToDisplay={this.props.postsToDisplay}/>) : <span></span>
 
         if(this.props.postsToDisplay==='posts'){
-          typeOfPost = this.context.currentDisplay.dashboard.current_post_type
+          typeOfPost = this.context.currentDisplay.dashboard.current_post_type;
         }
         else if(this.props.postsToDisplay==='bookmarks'){
           typeOfPost = this.context.currentDisplay.bookmark_display.current_post_type;
         }
-      filteredResults = FilterPosts(posts, currentDisplay)
+      filteredResults = FilterPosts(posts, currentDisplay);
       
     return(
       <section className="results-list">   
-        {this.props.postsToDisplay==='posts'? <h2>You are viewing {typeOfPost} posts {this.context.currentDisplay.user_posts_displayed} </h2> : <h2>Your Bookmarks</h2>}           
+        {this.props.postsToDisplay==='posts'? <h2>You are viewing {typeOfPost} posts {this.context.currentDisplay.user_posts_displayed} </h2> : <h2>Your Posts</h2>}           
         <ul className="result-list">
           {postde}
         </ul>

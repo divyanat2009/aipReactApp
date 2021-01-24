@@ -46,15 +46,13 @@ class UpdateBookmark extends Component{
         content:bookmarkContent.value
        }
 
-       let url = `${config.API_ENDPOINT}/bookmarks/${bookmark_id}`
-       console.log(url)
+       let url = `${config.API_ENDPOINT}/bookmarks/${bookmark_id}`;       
 
        fetch(url, {
             method: 'PATCH',
             body: JSON.stringify(updatedBookmark),
             headers: {
-              'content-type': 'application/json',
-             // 'authorization': `Bearer ${config.API_KEY}`
+              'content-type': 'application/json',            
             }
           })
             .then(res => {
@@ -62,7 +60,7 @@ class UpdateBookmark extends Component{
                 // get the error message from the response,
                 return res.json().then(error => {
                  // then throw it
-                 throw error
+                 throw error;
                 })
               }
               return 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../_styles/filter.css';
 import Context from '../Context';
-import IconButton from './IconButton.js'
+import IconButton from './IconButton.js';
 
 class FilterButtons extends Component{
     static defaultProps ={

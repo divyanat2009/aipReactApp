@@ -138,7 +138,7 @@ class App extends Component{
       });
     })
 }
-
+//Get Users
 getUsers=()=>{
   fetch(`${config.API_ENDPOINT}/users`,{
     method:'GET',

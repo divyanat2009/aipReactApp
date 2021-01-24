@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import '../_styles/filter.css';
 import Context from '../Context';
-import Tooltip from './Tooltip'
+import Tooltip from './Tooltip';
 
 
 class FilterButtonsForm extends Component{

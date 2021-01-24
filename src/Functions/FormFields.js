@@ -1,4 +1,4 @@
 export const FormFields=()=>{
-    let fields = ''
-  return fields
+    let fields = '';
+    return fields;
 }

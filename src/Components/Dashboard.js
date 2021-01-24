@@ -45,9 +45,7 @@ class Dashboard extends Component{
             heading = {'Posts'}
             postsToDisplay = {this.state.posts}
             posts = {this.state.posts}/>
-          </main>
-          <footer className="copyright">
-          </footer>
+          </main>          
         </div>
       )
     }
