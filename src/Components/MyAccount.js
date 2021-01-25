@@ -21,8 +21,7 @@ class MyAccount extends Component{
     } 
     setForm(e)
    {
-    const {name, value} = e.target;
-    console.log(value);
+    const {name, value} = e.target;    
     this.setState({
         [name] : value
     });
@@ -41,8 +40,7 @@ class MyAccount extends Component{
         .then(response=> response.json())
         .then(response=>{
             if(response) 
-            {
-                console.log(response.token);
+            {            
                 cookies.set('token', response.token, { path: '/' });
                 window.location.href = BASE_URL_FRONTEND+"/"+this.state.username+"/dashboard";
             }
@@ -68,7 +66,7 @@ class MyAccount extends Component{
                     </div>
                     <div className="form-field-group">
                         <label htmlFor="password">Password</label>
-                        <input placeholder="*******" type="password" name='password' id='password' required onChange={(e)=>this.setForm(e)}/>
+                        <input placeholder="*******" type="password" name='password' id='password' autoComplete="new-password" required onChange={(e)=>this.setForm(e)}/>
                     </div>
                     <button type="submit">SignIn</button>                    
                    </form> 
