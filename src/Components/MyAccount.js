@@ -75,4 +75,4 @@ class MyAccount extends Component{
         )
     }
 }
-export default MyAccount
+export default MyAccount;

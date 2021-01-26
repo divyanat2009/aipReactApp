@@ -1,7 +1,7 @@
 import React from 'react';
 import Context from '../Context';
 import config from '../config.js';
-import Tooltip from './Tooltip'
+import Tooltip from './Tooltip';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark} from '@fortawesome/free-solid-svg-icons';
 
@@ -10,7 +10,7 @@ function addBookmarkRequest(allPostInfo, currentUserId, callback){
     let newBookmark = {
         user_id:currentUserId,
         post_id:allPostInfo.post_id,
-    }
+    };
     
     let url = `${config.API_ENDPOINT}/bookmarks`;
     fetch(url,{
@@ -22,7 +22,7 @@ function addBookmarkRequest(allPostInfo, currentUserId, callback){
     })
    .then(res=>{
         if(!res.ok){
-        throw new Error('Something went wrong, please try again')
+        throw new Error('Something went wrong, please try again');
         }
         return res.json()
     })
@@ -36,8 +36,8 @@ function addBookmarkRequest(allPostInfo, currentUserId, callback){
        //go to bookmark
     })
     .catch(error => {
-        console.log(`there was an error`)
-        console.log(error)
+        console.log(`there was an error`);
+        console.log(error);
     })
 }
 

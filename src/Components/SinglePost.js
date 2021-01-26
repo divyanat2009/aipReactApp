@@ -53,7 +53,7 @@ class SinglePost extends Component{
                     
                 </div>                   
                 </li>)    
-        return(listItem)    
+        return(listItem);    
 }
 }
 export default SinglePost;

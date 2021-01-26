@@ -16,18 +16,18 @@ function deleteBookmarkRequest(bookmarkId, callback){
     })
    .then(res=>{
         if(!res.ok){
-        throw new Error('Something went wrong, please try again')
+        throw new Error('Something went wrong, please try again');
         }        
-        return 
+        return;
     })
     .then(() => {
       // call the callback when the request is successful
       // this is where the App component can remove it from state
-       callback(bookmarkId)
+       callback(bookmarkId);
     })
     .catch(error => {
-        console.log(`there was an error`)
-        console.log(error)
+        console.log(`there was an error`);
+        console.log(error);
     })
 }
 

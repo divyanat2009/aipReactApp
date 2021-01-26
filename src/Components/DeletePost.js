@@ -14,9 +14,9 @@ function deletePostRequest(postId, callback){
     })
    .then(res=>{
         if(!res.ok){
-        throw new Error('Something went wrong, please try again')
+        throw new Error('Something went wrong, please try again');
         }
-        return res.json()
+        return res.json();
     })
     .then(() => {
       // call the callback when the request is successful
@@ -24,7 +24,7 @@ function deletePostRequest(postId, callback){
        callback(postId)    
     })
     .catch(error => {
-       callback(postId, error)
+       callback(postId, error);
     })  
 }
 class DeletePost extends Component{

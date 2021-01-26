@@ -89,13 +89,13 @@ class NewPost extends Component{
     const {inputs} = this.state;
         
     if(id!=='post_image'){
-        inputs[id]={value:inputValue,touched:true}
+        inputs[id]={value:inputValue,touched:true};
      }
      else if(id==='post_image'){
     
-         inputs[id]={file:inputValue[0],touched:true}
+         inputs[id]={file:inputValue[0],touched:true};
      }
-    this.setState({inputs:inputs})
+    this.setState({inputs:inputs});
     this.checkDisableSubmit();
   }
 
@@ -106,13 +106,13 @@ class NewPost extends Component{
     else{
         if(this.state.fieldType === 'lifestyle' || this.state.fieldType === 'event' || this.state.fieldType === 'podcast') {
         if( this.state.inputs.title.touched && this.state.inputs.link.touched && this.state.submitDisabled)
-        {this.setState({submitDisabled:false})}
+        {this.setState({submitDisabled:false})};
         }
         else if(this.state.fieldType==='recipe' && this.state.inputs.content.touched && this.state.submitDisabled){
-          this.setState({submitDisabled:false})  
+          this.setState({submitDisabled:false});  
         }
         else if(this.state.fieldType==='book' && this.state.inputs.title.touched && this.state.inputs.author.touched && this.state.submitDisabled){
-          this.setState({submitDisabled:false})  
+          this.setState({submitDisabled:false});  
         }  
     }
 }
@@ -177,17 +177,17 @@ handleSubmit=(e)=>{
           // get the error message from the response,
             return resp.json().then(error => {
           // then throw it
-            throw error
+            throw error;
             })
           }
            return resp.json()
         })
         .then(post => {
-            this.props.history.push('/dashboard')
-            this.context.addPost(newPostWithImage)       
+            this.props.history.push('/dashboard');
+            this.context.addPost(newPostWithImage);       
         })
         .catch(error => {
-            this.setState({ error })
+            this.setState({ error });
         })    
     }    
 else if(!inputs.post_image.file){  
@@ -212,17 +212,17 @@ fetch(url, {
         // get the error message from the response,
         return res.json().then(error => {
         // then throw it
-        throw error
+        throw error;
         })
     }
     return res.json()
     })
     .then(post => {
-      this.props.history.push('/dashboard')
-      this.context.addPost(newPost)    
+      this.props.history.push('/dashboard');
+      this.context.addPost(newPost);    
     })
     .catch(error => {
-      this.setState({ error })
+      this.setState({ error });
     })
   }
 }      

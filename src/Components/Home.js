@@ -34,7 +34,7 @@ learnMore=()=>{
 }
 }
 render(){
-  //const { isBoxVisible } = this.state;
+  
   return(            
     <div className="home">
       <Nav pageType={'home'} onSignUpPopUp = {this.signUpPopUp} onSignUpInClick = {this.signUpInClick} gotoLearnMore = {this.gotoLearnMore}/>      
