@@ -14,7 +14,7 @@ export const FilterPosts = (posts,currentDisplay) =>{
 //function to find the userid that corresponds to an entered username
 export const FindUserId = (usernameInput, users)=>{
    let lowerCaseUserNameInput = usernameInput.toLowerCase();
-   let user = users.find(user=>user.username===lowerCaseUserNameInput)
+   let user = users.find(user=>user.username===lowerCaseUserNameInput);
    if(user){
      return user.id}
    else{return}

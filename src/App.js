@@ -103,8 +103,8 @@ class App extends Component{
     })
   }
   getPostsByUser=(userToDisplay,currentUserId)=>{    
-    let url = `${config.API_ENDPOINT}/posts`
-    currentUserId = this.state.currentUserInfo.user_id
+    let url = `${config.API_ENDPOINT}/posts`;
+    currentUserId = this.state.currentUserInfo.user_id;
 
     if(userToDisplay==='allUsers'){
       url = `${config.API_ENDPOINT}/posts`    
@@ -124,13 +124,13 @@ class App extends Component{
     })
     .then(res=>{
         if(!res.ok){
-        throw new Error('Something went wrong, please try again')
+        throw new Error('Something went wrong, please try again');
         }
         return res.json()
     })
     .then(postdata=>{      
       this.updatePostType('all');
-      this.updatePostsDisplayed(postdata)
+      this.updatePostsDisplayed(postdata);
     })
     .catch(err=>{
       this.setState({
@@ -148,7 +148,7 @@ getUsers=()=>{
   })
   .then(res=>{
     if(!res.ok){
-      throw new Error('Something went wrong, please try again')
+      throw new Error('Something went wrong, please try again');
     }
     return res.json()
   })
@@ -164,7 +164,7 @@ getUsers=()=>{
   })
 }
 componentDidMount(){
-  this.setState({error:null})
+  this.setState({error:null});
   //getting users
   this.getUsers();
 }

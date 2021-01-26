@@ -1,6 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
-import DeleteBookmark from '../DeleteBookmark'
+import ReactDOM from 'react-dom';
+import DeleteBookmark from '../DeleteBookmark';
 import { BrowserRouter as Router, Link} from 'react-router-dom';
 
 

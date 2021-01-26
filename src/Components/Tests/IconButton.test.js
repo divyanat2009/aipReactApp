@@ -1,8 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
-import { shallow } from 'enzyme'
-import toJson from 'enzyme-to-json'
-import IconButton from '../IconButton'
+import ReactDOM from 'react-dom';
+import { shallow } from 'enzyme';
+import toJson from 'enzyme-to-json';
+import IconButton from '../IconButton';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import { faUser} from '@fortawesome/free-solid-svg-icons';
 

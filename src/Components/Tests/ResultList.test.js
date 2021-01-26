@@ -1,6 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
-import ResultList from '../ResultList'
+import ReactDOM from 'react-dom';
+import ResultList from '../ResultList';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 

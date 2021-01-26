@@ -1,6 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
-import Nav from '../Nav'
+import ReactDOM from 'react-dom';
+import Nav from '../Nav';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 

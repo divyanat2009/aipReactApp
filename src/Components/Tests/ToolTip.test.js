@@ -1,8 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
-import { shallow } from 'enzyme'
-import toJson from 'enzyme-to-json'
-import Tooltip from '../Tooltip'
+import ReactDOM from 'react-dom';
+import { shallow } from 'enzyme';
+import toJson from 'enzyme-to-json';
+import Tooltip from '../Tooltip';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 

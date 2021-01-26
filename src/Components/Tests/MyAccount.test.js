@@ -1,6 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
-import MyAccount from '../MyAccount'
+import ReactDOM from 'react-dom';
+import MyAccount from '../MyAccount';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 

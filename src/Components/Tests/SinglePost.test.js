@@ -1,6 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
-import SinglePost from '../SinglePost'
+import ReactDOM from 'react-dom';
+import SinglePost from '../SinglePost';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 
