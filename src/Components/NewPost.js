@@ -27,7 +27,7 @@ class NewPost extends Component{
       link:{value:"",touched:false},
       content:{value:"",touched:false},
       post_image:{value:"",touched:false, file:""}},
-      user: this.props.match.params.username || "divya",
+      user: "",
     }//end of state
   }
   //updates the fields displayed depending on the type of post
