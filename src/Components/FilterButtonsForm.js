@@ -28,7 +28,7 @@ class FilterButtonsForm extends Component{
         <FontAwesomeIcon className="filter-icon" icon={iconType} />
         <Tooltip message={`${tooltipMessage}.`} positionClass={tooltipClass}/>
         </button>);
-      return(button)
+      return(button);
     })
     return(
       <section className="filter-button-row">

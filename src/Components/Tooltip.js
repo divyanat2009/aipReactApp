@@ -16,7 +16,7 @@ componentWillUnmount=() =>{
 }
 
   render(){
-    const {isTooltipVisible} =this.state
+    const {isTooltipVisible} =this.state;
     return (
       <span className='tooltip'
         onClick={this.showTooltip}

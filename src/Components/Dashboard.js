@@ -15,7 +15,7 @@ class Dashboard extends Component{
     const user = this.props.match.params.username;
     this.setState({
       user : user
-    })
+    });
     fetch(BASE_URL+'/posts/'+user, {
       method:'get',
       headers:{

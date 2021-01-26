@@ -24,13 +24,14 @@ signUpInClick=()=>{
 }
 learnMore=()=>{
   if(this.state.isBoxVisible)
-    {this.setState(prevState => ({ isBoxVisible: !prevState.isBoxVisible }));}
+    {this.setState(prevState => ({ isBoxVisible: !prevState.isBoxVisible }));
+  }
     //need to scroll to learn more
   if(this.state.statsRef.current){
     this.state.statsRef.current.scrollIntoView({ 
     behavior: "smooth", 
     block: "start"
-  })
+  });
 }
 }
 render(){

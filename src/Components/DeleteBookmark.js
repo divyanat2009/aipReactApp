@@ -33,10 +33,10 @@ function deleteBookmarkRequest(bookmarkId, callback){
 
 export default function DeleteBookmark(props){
  //change the icon depending if on the dashboard or bookmark page
- let icon=faBookmark
+ let icon=faBookmark;
  if(props.displayType==='bookmarks'){
      icon=faMinusSquare
- }    
+ };    
     return(
         <Context.Consumer>
             {(context)=>(

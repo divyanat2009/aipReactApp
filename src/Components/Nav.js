@@ -29,7 +29,7 @@ class Nav extends Component {
                   tooltipMessage = {'Sign-Out'}
                   tooltipClass={'bottom-farleft'}
               />
-          </nav>)}     
+          </nav>)};     
         if (this.props.pageType==='newPost'){
           List = ( 
             <nav className="main-nav nav">
@@ -52,22 +52,19 @@ class Nav extends Component {
                     tooltipMessage = {'Sign-Out'}
                     tooltipClass={'bottom-farleft'}
                 />
-            </nav>)
-
-        }   
+            </nav>)};   
         if (this.props.pageType==='home'){
             List = (
               <div className="home-nav-links">
                 <button className="nav-link" onClick={this.props.onSignUpPopUp}>Sign-up</button>
                 <button className="nav-link" onClick={this.props.onSignUpInClick} >Sign-in</button>
               </div>)
-        }                         
+        };                         
     return (
       <div>
         {List}
       </div>
-    );
-    }
+    )};
 }
  
 export default Nav;

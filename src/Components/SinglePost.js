@@ -24,19 +24,19 @@ class SinglePost extends Component{
         let icon ='';
 
         if(post_type==='lifestyle'){
-            icon = faHeartbeat
+            icon = faHeartbeat;
         }
         else if(post_type==='event'){
-            icon = faCalendarAlt
+            icon = faCalendarAlt;
         }
         else if(post_type==='recipe'){
-            icon = faSeedling
+            icon = faSeedling;
         }
         else if(post_type==='podcast'){
-            icon = faPodcast
+            icon = faPodcast;
         }
         else if(post_type==='book'){
-            icon = faBookOpen
+            icon = faBookOpen;
         }
   
     listItem = (<li className='single-post' key={this.props.post_id}>

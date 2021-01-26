@@ -24,13 +24,13 @@ function addBookmarkRequest(allPostInfo, currentUserId, callback){
         if(!res.ok){
         throw new Error('Something went wrong, please try again');
         }
-        return res.json()
+        return res.json();
     })
     .then((bookmark) => {
       // call the callback when the request is successful
       // this is where the App component can remove it from state 
       
-      newBookmarkPost = {...newBookmarkPost, bookmark_id:bookmark.id}
+      newBookmarkPost = {...newBookmarkPost, bookmark_id:bookmark.id};
      
       callback(newBookmarkPost);
        //go to bookmark

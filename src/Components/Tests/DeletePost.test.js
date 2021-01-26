@@ -1,6 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
-import DeletePost from '../DeletePost'
+import ReactDOM from 'react-dom';
+import DeletePost from '../DeletePost';
 import { BrowserRouter as Router, Link} from 'react-router-dom';
 
 

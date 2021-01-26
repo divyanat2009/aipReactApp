@@ -33,7 +33,7 @@ class NewPost extends Component{
   //updates the fields displayed depending on the type of post
   updateFields=(fieldTypeSelected)=>{
     const {areTypeSpecificFieldsVisible} = this.state;
-    const {inputs} = this.state
+    const {inputs} = this.state;
    //first resetting fields to not display
     Object.keys(areTypeSpecificFieldsVisible).forEach(key => {
        areTypeSpecificFieldsVisible[key]=false
@@ -82,7 +82,7 @@ class NewPost extends Component{
             fieldType:fieldTypeSelected,
             inputs:inputs,
             submitDisabled:true,
-            areTypeSpecificFieldsVisible:areTypeSpecificFieldsVisible})
+            areTypeSpecificFieldsVisible:areTypeSpecificFieldsVisible});
     }
 
   updateChange=(inputValue, id)=>{
@@ -101,7 +101,7 @@ class NewPost extends Component{
 
   checkDisableSubmit(){
     if(this.state.inputs.post_image.touched){
-        this.setState({submitDisabled:false})
+        this.setState({submitDisabled:false});
     }
     else{
         if(this.state.fieldType === 'lifestyle' || this.state.fieldType === 'event' || this.state.fieldType === 'podcast') {
@@ -147,7 +147,7 @@ handleSubmit=(e)=>{
         by:inputs.by.value,
         image_path:''
     }
-    let url = `${config.API_ENDPOINT}/posts`
+    let url = `${config.API_ENDPOINT}/posts`;
     if(inputs.post_image.file){
         let formData = new FormData();
         const fileField = inputs.post_image.file;        
@@ -170,7 +170,7 @@ handleSubmit=(e)=>{
                 headers: {
                   'content-type': 'application/json',                 
                 }
-              })
+              });
         })
        .then(resp => {
           if (!resp.ok) {
@@ -180,7 +180,7 @@ handleSubmit=(e)=>{
             throw error;
             })
           }
-           return resp.json()
+           return resp.json();
         })
         .then(post => {
             this.props.history.push('/dashboard');
@@ -188,7 +188,7 @@ handleSubmit=(e)=>{
         })
         .catch(error => {
             this.setState({ error });
-        })    
+        });    
     }    
 else if(!inputs.post_image.file){  
   let newPost = {
@@ -199,7 +199,7 @@ else if(!inputs.post_image.file){
     content:inputs.content.value,
     by:inputs.by.value,
     image_path:''
-}
+};
 fetch(url, {
     method: 'POST',
     body: JSON.stringify(newPost),
@@ -215,7 +215,7 @@ fetch(url, {
         throw error;
         })
     }
-    return res.json()
+    return res.json();
     })
     .then(post => {
       this.props.history.push('/dashboard');

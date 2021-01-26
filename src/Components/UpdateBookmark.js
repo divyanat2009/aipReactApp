@@ -11,32 +11,41 @@ class UpdateBookmark extends Component{
             error:null,
             submitDisabled:true,
             bookmarkContent:{value:"",touched:false}
-        }//end of state
+        };//end of state
     }
 
     componentDidMount(){
        let {bookmarkContent} = this.state;
        bookmarkContent.value=this.props.bookmark_content || ''
-       this.setState({bookmarkContent:bookmarkContent})
+       this.setState(
+         {
+           bookmarkContent:bookmarkContent
+          });
     }
 
     updateChange=(inputContent)=>{
        let {bookmarkContent} = this.state;
-       bookmarkContent={value:inputContent,touched:true}
-       this.setState({bookmarkContent:bookmarkContent})
+       bookmarkContent={value:inputContent,touched:true};
+       this.setState({
+         bookmarkContent:bookmarkContent
+        });
     }
 
     updateTouched=()=>{
        let {bookmarkContent} = this.state;
-       bookmarkContent={touched:false}
-       this.setState({bookmarkContent:bookmarkContent})
+       bookmarkContent={touched:false};
+       this.setState({
+         bookmarkContent:bookmarkContent
+        });
     }
 
     handleClickCancel=()=>{
        //resets the state of the form to the bookmark's current state and not the form's state
        let {bookmarkContent} = this.state;
        bookmarkContent.value=this.props.bookmark_content || ''
-       this.setState({bookmarkContent:bookmarkContent})
+       this.setState({
+         bookmarkContent:bookmarkContent
+        });
     }
 
     handleSubmit=(e, bookmark_id)=>{
@@ -44,7 +53,7 @@ class UpdateBookmark extends Component{
        const {bookmarkContent}=this.state;
        let updatedBookmark = {
         content:bookmarkContent.value
-       }
+       };
 
        let url = `${config.API_ENDPOINT}/bookmarks/${bookmark_id}`;       
 
@@ -63,7 +72,7 @@ class UpdateBookmark extends Component{
                  throw error;
                 })
               }
-              return 
+              return; 
             })
             .then(resData => {
               this.context.updateBookmark(bookmark_id, bookmarkContent.value)

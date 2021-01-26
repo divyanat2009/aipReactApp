@@ -17,8 +17,8 @@ class IconButton extends Component{
       activeTypeClass = currentDisplay[pageType].current_post_type;
     }
 
-    let tooltip =(<Tooltip message={`${tooltipMessage}.`} positionClass={tooltipClass}/>)
-    let button = (<button></button>)
+    let tooltip =(<Tooltip message={`${tooltipMessage}.`} positionClass={tooltipClass}/>);
+    let button = (<button></button>);
     if(iconType==='text-all'){
         button = (<Link 
                  to={link}
@@ -42,6 +42,6 @@ class IconButton extends Component{
            {button}
         </div>
     )
-  }
+  };
 }
 export default IconButton; 
